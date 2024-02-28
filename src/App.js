@@ -6,11 +6,12 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Birddetails from './Birddetails';
 import Birdlist from './Birdlist';
+import Footer from './Footer';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App ">
         <Navbar />
         <Switch>
           <Route exact path="/">
@@ -25,7 +26,9 @@ function App() {
               <Birddetails />
           </Route>
         </Switch>
+        <Footer />
       </div>
+      
     </Router>
   );
 }

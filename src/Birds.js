@@ -3,7 +3,7 @@ import useFetch from './useFetch'
 import Birdlist from './Birdlist'
 
 const Birds = () => {
-    const { error, isPending, data: Tbl_Bird } = useFetch('http://localhost:8000/Tbl_Bird/')
+    const { error, isPending, data: Tbl_Bird } = useFetch('https://bird-json-server.vercel.app/Tbl_Bird/')
   return (
     <div className="birds">
     { error && <div>{ error }</div> }

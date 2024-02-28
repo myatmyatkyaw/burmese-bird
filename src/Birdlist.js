@@ -6,24 +6,28 @@ function BirdList() {
   const [birdList, setBirdList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/Tbl_Bird')
+    fetch('https://bird-json-server.vercel.app/Tbl_Bird')
       .then(response => response.json())
       .then(data => setBirdList(data))
       .catch(error => console.log('Error fetching bird data:', error));
   }, []);
 
   return (
-    <div className='detailbird bg-secondary'>
-        <h2>ချစ်စရာငှက်ကလေးများ</h2>
+    <div className='detailbird d-flex flex-column'>
+      <div className="moving-text-container">
+        <h2 className='moving-text pt-5 text-light'>ချစ်စရာငှက်ကလေးများအကြောင်းကို လေ့လာကြည့်ကြပါစို့</h2>
+      </div>
     <div className="bird-list row">
     {birdList.map(bird => (
-      <div className="col-md-4" key={bird.Id}>
-        <div className="card card-body bird-preview bg-secondary border-0 shadow-p3 rounded">
+      <div className="col-md-3" key={bird.Id}>
+        <div className="card card-body bird-preview shadow-3 ">
            
           <Link to={`/bird/${bird.id}`}>
-            <img className="card-img-top" src={process.env.PUBLIC_URL + '/' + bird.ImagePath} alt="Bird" style={{ width:300 , height:300 }}/>
+            
+            <img className="card-img-top " src={process.env.PUBLIC_URL + '/' + bird.ImagePath} alt="Bird" style={{ width:250 , height:250 }}/>
             {/* <div className="card-body border-0 shadow-p3"> */}
-              <h5 className="card-title text-warning">{bird.BirdMyanmarName} - {bird.BirdEnglishName}</h5>
+            <h6 className="card-title textlight mt-3">{bird.BirdEnglishName}</h6>
+              <h5 className="card-title text-light mt-3">{bird.BirdMyanmarName}  </h5>
               {/* Uncomment the line below if you want to display bird descriptions */}
               {/* <p className="card-text">{bird.Description}</p> */}
             {/* </div> */}
