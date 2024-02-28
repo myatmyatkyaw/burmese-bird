@@ -8,13 +8,14 @@ const BirdDetails = () => {
   const { data: bird, error, isPending } = useFetch('https://bird-json-server.vercel.app/Tbl_Bird/' + id);
   const history = useHistory();
 
-  // const handleClick = () => {
-  //   fetch('http://localhost:8000/Tbl_Bird/' + bird.id, {
-  //     method: 'DELETE'
-  //   }).then(() => {
-  //     history.push('/');
-  //   });
-  // };
+  const handleClick = () => {
+    fetch('https://bird-json-server.vercel.app/Tbl_Bird/' + bird.id, {
+      method: 'DELETE'
+    }).then(() => {
+      history.push('/');
+    });
+  };
+
   const handleBack = () => {
     history.goBack(); // Navigate back to the previous page
   };
@@ -38,8 +39,8 @@ const BirdDetails = () => {
                         <h2 className="card-title text-light">{bird.BirdEnglishName}</h2>
                         <h3 className="card-subtitle mb-2  text-light">{bird.BirdMyanmarName}</h3>
                         <p className="card-text textlight">{bird.Description}</p>
-                        <button className="btn btn-outline-dark" onClick={handleBack}>Back</button>
-                        {/* <button className="btn btn-warning" onClick={handleClick}>Delete</button> */}
+                        <button className="btn btn-outline-dark me-3" onClick={handleBack}>Back</button>
+                        <button className="btn btn-outline-danger" onClick={handleClick}>Delete</button>
                     </div>
                 </div>
             </div>
