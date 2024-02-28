@@ -22,7 +22,7 @@ function BirdList() {
     <div className="bird-list row">
     {birdList.map(bird => (
       <div className="col-md-3" key={bird.Id}>
-        <div className="card card-body bird-preview shadow ">
+        <div className="card card-body bird-preview shadow " data-aos="zoom-in">
            
           <Link to={`/bird/${bird.id}`}>
             

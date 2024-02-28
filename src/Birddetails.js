@@ -26,14 +26,14 @@ const BirdDetails = () => {
     {bird && (
         <div className="row">
             <div className="col-md-4">
-                <div className="card shadow">
+                <div className="card shadow" data-aos="zoom-in">
                  
                     <img src={process.env.PUBLIC_URL + '/' + bird.ImagePath} className="img-top" alt="Bird" />
                    
                 </div>
             </div>
             <div className="col-md-8">
-                <div className="card shadow ">
+                <div className="card shadow " data-aos="zoom-in">
                     <div className="card-body">
                         <h2 className="card-title text-light">{bird.BirdEnglishName}</h2>
                         <h3 className="card-subtitle mb-2  text-light">{bird.BirdMyanmarName}</h3>
