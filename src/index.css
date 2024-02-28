@@ -105,11 +105,11 @@ code {
 }
 
 
-.card-img-top {
+.img-top {
   border-radius: 30px;
   overflow: hidden;
 }
-.card-img-top img {
+.img-top img {
   width: 100%; /* Constrain the width of the image to 100% of its container */
   height: auto; /* Automatically adjust the height to maintain aspect ratio */
 }
@@ -137,4 +137,8 @@ code {
 .footer{
   padding-top: 60px;
   padding-bottom: 80px;
+}
+
+.reverse-icon {
+  transform: scaleX(-1); /* Horizontally flip the icon */
 }

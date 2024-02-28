@@ -15,6 +15,9 @@ const BirdDetails = () => {
   //     history.push('/');
   //   });
   // };
+  const handleBack = () => {
+    history.goBack(); // Navigate back to the previous page
+  };
 
   return (
     <div className="container my-4 ">
@@ -24,15 +27,18 @@ const BirdDetails = () => {
         <div className="row">
             <div className="col-md-4">
                 <div className="card shadow">
-                    <img src={process.env.PUBLIC_URL + '/' + bird.ImagePath} className="card-img-top" alt="Bird" />
+                 
+                    <img src={process.env.PUBLIC_URL + '/' + bird.ImagePath} className="img-top" alt="Bird" />
+                   
                 </div>
             </div>
             <div className="col-md-8">
-                <div className="card shadow">
+                <div className="card shadow ">
                     <div className="card-body">
-                        <h2 className="card-title">{bird.BirdEnglishName}</h2>
-                        <h3 className="card-subtitle mb-2 text-muted">{bird.BirdMyanmarName}</h3>
-                        <p className="card-text">{bird.Description}</p>
+                        <h2 className="card-title text-light">{bird.BirdEnglishName}</h2>
+                        <h3 className="card-subtitle mb-2  text-light">{bird.BirdMyanmarName}</h3>
+                        <p className="card-text textlight">{bird.Description}</p>
+                        <button className="btn btn-outline-dark" onClick={handleBack}>Back</button>
                         {/* <button className="btn btn-warning" onClick={handleClick}>Delete</button> */}
                     </div>
                 </div>

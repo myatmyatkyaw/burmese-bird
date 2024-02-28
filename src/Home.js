@@ -8,6 +8,7 @@ import { FcIdea } from "react-icons/fc";
 
 const Home = () => {
   return (
+    <div className='container'>
     <div className='home-bird pt-5'>
       {/* <h1 className='text-center'>Welcome to Bird</h1> */}
       <div className='container'>
@@ -15,7 +16,7 @@ const Home = () => {
           <div className='col-md-11'>
             <div className='row'>
               <div className='card card-body col-md-5 shadow mx-auto'>
-                <div className='row'>
+                <div className='row justify-content-evenly'>
                   <div className='col-md-4 pe-1 '>
                     <div className="bird-image mt-3 me-2">
                       <Link to="/birds">
@@ -31,11 +32,11 @@ const Home = () => {
                 </div>
               </div>
               <div className='col-md-6'>
-                <div className='row'>
+                <div className='row d-flex justify-content-evenly'>
                   <div className='card col-md-11 moving-text-container mb-3 ms-4'>
-                    <p className='moving-text pt-2 textlight' style={{ whiteSpace: 'nowrap' }}>ငှက်သည် အမွှေးအတောင်ရှိ၍ အတောင်ပံနှစ်ဖက်ရှိသော သွေးနွေးသတ္တဝါအမျိုးအစားတွင် ပါဝင်သည်။</p>
+                    <p className='moving-text pt-2 textlight' style={{ whiteSpace: 'nowrap' }}>ငှက်သည် အမွှေးအတောင်ရှိ၍ အတောင်ပံနှစ်ဖက်ရှိသော သွေးနွေးသတ္တဝါအမျိုးအစားတွင် ပါဝင်သည်။ သို့သော် အားလုံး ပျံသန်းနိုင်စွမ်း မရှိကြပေ။ အချို့ငှက်များသည် အလွန်အပြေးသန်သူများဖြစ်ကြပြီး အချို့ကတော့ အလွန်ရေကူး ကျွမ်းကျင်သူများ ဖြစ်ကြသည်။ ငှက်သည် ကျောရိုးရှိသတ္တဝါဖြစ်ပြီး ဥ,ဥတတ်သော သတ္တဝါအမျိုးအစားလည်း ဖြစ်သည်။ ဥက ပေါက်ဖွားလာသော ကလေးငယ်များကို စောင့်ရှောက်လေ့ ရှိကြသည်။</p>
                   </div>
-                  <div className='card col-md-5 ms-4 me-4'>
+                  <div className='card col-md-5 '>
                     <a className='card-body' href='https://my.wikipedia.org/wiki/%E1%80%84%E1%80%BE%E1%80%80%E1%80%BA'>
                       <img src={Feather} alt="feather" style={{ width: 150, height: 150 }} />
                     </a>
@@ -57,8 +58,8 @@ const Home = () => {
         <div className='row justify-content-center mt-4'>
           <div className='col-md-11'>
             <div className='row'>
-              <div className='col-md-6 card card-body shadow-3 me-3 '>
-                <div className='row justify-content-between'>
+              <div className='col-md-7 card card-body shadow-3 me-3 '>
+                <div className='row d-flex justify-content-evenly'>
                   <div className='col-md-3 card '><h2 className='text-light'>၈၆၀၀</h2><p className='textlight'>ငှက်အမျိုးပေါင်း(မျိုးစိတ်ပေါင်း)</p></div>
                   <div className='col-md-3 card '><h2 className='text-light'>၁၆၀၀</h2><p className='textlight'>မျိုးစုပေါင်း</p></div>
                   <div className='col-md-3 card '><h2 className='text-light'>၁၅၅</h2><p className='textlight'>မျိုးရင်းပေါင်း</p></div>
@@ -75,7 +76,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-
+    </div>
 
   )
 }
